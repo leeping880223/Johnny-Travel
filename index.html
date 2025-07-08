@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Johnny Travel</title>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+<header>
+  <div class="logo",href="#">Johnny Travel</div>
+  <nav class="navbar">
+    <ul>
+      <li class="dropdown">
+        <a href="#">AREA</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">North</a></li>
+          <li><a href="#">West</a></li>
+          <li><a href="#">South</a></li>
+          <li><a href="#">East</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">ACTIVITY</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Beach</a></li>
+          <li><a href="#">Mountain</a></li>
+          <li><a href="#">Alcohol & Party</a></li>
+          <li><a href="#">Theme Park</a></li>
+          <li><a href="#">History & Photo</a></li>
+          <li><a href="#">Animal</a></li>
+        </ul>
+      </li>
+
+       <li class="dropdown">
+        <a href="#">FOOD</a>
+        <ul class="dropdown-menu">
+            <li><a href="#">breakfast</a></li>
+          <li><a href="#">Lunch</a></li>
+          <li><a href="#">Dinner</a></li>
+          <li><a href="#">Desert & Café</a></li>
+          <li><a href="#">Boba</a></li>
+          <li><a href="#">Night street food</a></li>
+          <li><a href="#">Special food by area</a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown">
+        <a href="#">PHOTOGRAPHY</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Most popular</a></li>
+          <li><a href="#">Beach</a></li>
+          <li><a href="#">Mountain</a></li>
+          <li><a href="#">Café</a></li>
+          <li><a href="#">City & Party</a></li>
+          <li><a href="#">Animal</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <a href="#">ACCOMMODATION</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Hotel</a></li>
+          <li><a href="#">Backpacker</a></li>
+          <li><a href="#">Inn</a></li>
+          <li><a href="#">Airbnb & villa</a></li>
+          <li><a href="#">Internet café with sleeping pods</a></li>
+          <li><a href="#">Ganbanyoku <br>(Stone Spa Bathing)</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">About me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- assistant -->
+  <div id="assistant" title="Assistant">
+    <div class="icon">💬</div>
+
+    <button class="close-btn" aria-label="Close chat window">&times;</button>
+
+    <div class="chat-window" role="region" aria-live="polite">
+        <p>Hello! I’m your assistant. How can I help you today?</p>
+        <!-- 新增輸入欄位 -->
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Type a message..." />
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+  </div>
+  <!-- 引用外部 JavaScript 檔案 -->
+  <script src="script.js"></script> 
+<!-- map -->
+  <div id="map"></div>
+
+    <script src="main.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPWORYwQ1E4wGu4GslAIkOES_SV7Qh0Rk&callback=initMap"
+      async
+      defer
+    ></script>
+</body>
+</html>

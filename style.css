@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #444;
+  display: flex;
+  justify-content: flex-end; /* 導覽列靠右 */
+ 
+}
+
+.navbar ul li {
+  position: relative;
+  text-align: center; /* 至中 */
+  min-width: 10%;
+}
+
+.navbar ul li a {
+  display: grid;
+  padding: 15px 20px;       
+  color: white;
+  text-decoration: none;
+  min-width: clamp(160px, 2vw, 30px);
+}
+
+.navbar ul li:hover {
+  background-color: #666;
+}
+
+.dropdown-menu {
+  display: none ;
+  position: absolute;
+  top: 100%;
+  text-align: center; /* 至中 */
+  background-color: #555;
+  flex:1;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  visibility: hidden;
+  
+}
+
+.dropdown-menu li a {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  position: static;
+  min-width: clamp(160px, 2vw, 30px);
+}
+
+.dropdown-menu li a:hover {
+  background-color: #777;
+  min-width: clamp(160px, 2vw, 30px);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: grid;
+  visibility: visible;
+}
+
+
+/* Fixed container at bottom right */
+#assistant {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;      /* circle */
+    background-color: #0078d7;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Expanded chat window */
+#assistant.open {
+    width: 320px;
+    height: 400px;
+    border-radius: 8px;  /* square corners */
+    flex-direction: column;
+    font-size: 16px;
+    padding: 10px;
+    cursor: default;
+}
+
+/* Icon inside the button */
+#assistant .icon {
+    pointer-events: none; /* icon does not receive click events */
+    user-select: none;
+}
+
+/* Chat content area (hidden by default) */
+#assistant .chat-window {
+    display: none;
+    flex: 1;
+    width: 100%;
+    background: white;
+    color: black;
+    border-radius: 6px;
+    margin-top: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Show chat content when expanded */
+#assistant.open .chat-window {
+    display: block;
+}
+
+/* Close button */
+#assistant .close-btn {
+    position: relative;
+    bottom: 6px;
+    left: 150px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    display: none;
+}
+
+/* Show close button when expanded */
+#assistant.open .close-btn {
+    display: block;
+}
+
+
+#assistant.open .chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#assistant.open .messages {
+  flex: 1;
+  overflow-y: auto;
+}
+
+#assistant.open .input-area {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#assistant.open .input-area input {
+  flex: 1 0 auto;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 5%;
+  min-width:65%;
+}
+
+#assistant.open .input-area button {
+  padding: 6px 10px;
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5%;
+  right : 5%;
+}
+
+
+#map {
+  height: 70vh;
+  width: 50%;
+  border: 4px solid #333; /* 黑色邊框，粗度 4px */
+  border-radius: 10px;     /* 圓角（可選） */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 陰影（可選） */
+  margin-top: 40px; /* ⬅️ 往下移動 20px */
+}
