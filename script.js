@@ -143,7 +143,7 @@ function moveDown(item) {
   }
 }
 
-  fetch('/.netlify/functions/maps', {
+  fetch('netlify/functions/maps.js', {
   method: 'POST',
   body: JSON.stringify({
     origin: '25.055504,121.489535',
