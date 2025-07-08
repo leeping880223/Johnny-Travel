@@ -89,3 +89,56 @@ function initMap() {
     }
   );
 }
+
+
+
+function addItem() {
+  const input = document.getElementById("item-input");
+  const value = input.value.trim();
+  if (value === "") return;
+
+  const ul = document.getElementById("item-list");
+  const li = document.createElement("li");
+
+  const span = document.createElement("span");
+  span.textContent = value;
+
+  const controls = document.createElement("div");
+  controls.className = "controls";
+
+  const upBtn = document.createElement("button");
+  upBtn.textContent = "🔼";
+  upBtn.onclick = () => moveUp(li);
+
+  const downBtn = document.createElement("button");
+  downBtn.textContent = "🔽";
+  downBtn.onclick = () => moveDown(li);
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "❌";
+  deleteBtn.onclick = () => li.remove();
+
+  controls.appendChild(upBtn);
+  controls.appendChild(downBtn);
+  controls.appendChild(deleteBtn);
+
+  li.appendChild(span);
+  li.appendChild(controls);
+  ul.appendChild(li);
+
+  input.value = "";
+}
+
+function moveUp(item) {
+  const prev = item.previousElementSibling;
+  if (prev) {
+    item.parentNode.insertBefore(item, prev);
+  }
+}
+
+function moveDown(item) {
+  const next = item.nextElementSibling;
+  if (next) {
+    item.parentNode.insertBefore(next, item);
+  }
+}
