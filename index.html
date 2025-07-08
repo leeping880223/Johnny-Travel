@@ -92,8 +92,18 @@
         </div>
     </div>
   </div>
-  <!-- 引用外部 JavaScript 檔案 -->
-  <script src="script.js"></script> 
+
+<!-- todo-container -->
+  <aside>
+      <div>📝 Schedule</div>
+      <div id="todo-container">
+        <input type="text" id="item-input" placeholder="Enter item..." />
+        <button onclick="addItem()">＋</button>
+        <ul id="item-list"></ul>
+      </div>
+    </aside>
+<!-- 引用外部 JavaScript 檔案 -->
+<script src="script.js"></script> 
 <!-- map -->
   <div id="map"></div>
 
@@ -103,5 +113,6 @@
       async
       defer
     ></script>
+<!-- map -->
 </body>
 </html>
