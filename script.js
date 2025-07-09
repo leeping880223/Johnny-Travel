@@ -157,5 +157,4 @@ fetch('/.netlify/functions/maps', {
   .then(res => res.json())
   .then(data => {
     const directionsRenderer = new google.maps.DirectionsRenderer({ map });
-    directionsRenderer.setDirections(data);
   });
