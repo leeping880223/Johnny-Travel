@@ -34,7 +34,7 @@ sendBtn.addEventListener('click', function () {
   }
 });
 
-mpa
+// mpa
 let map;
 const locations = [
   { name: "捷絲旅台北三重館", lat: 25.055504, lng: 121.489535 },
