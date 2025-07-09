@@ -143,19 +143,19 @@ function moveDown(item) {
   }
 }
 
-fetch('/.netlify/functions/maps', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    origin: '25.055504,121.489535',
-    destination: '25.061276,121.493059',
-    waypoints: '25.058638,121.519411|...'
-  })
-})
-  .then(res => res.json())
-  .then(data => {
-    const directionsRenderer = new google.maps.DirectionsRenderer({ map });
-    directionsRenderer.setDirections(data);
-  });
+// fetch('/.netlify/functions/maps', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify({
+//     origin: '25.055504,121.489535',
+//     destination: '25.061276,121.493059',
+//     waypoints: '25.058638,121.519411|...'
+//   })
+// })
+//   .then(res => res.json())
+//   .then(data => {
+//     const directionsRenderer = new google.maps.DirectionsRenderer({ map });
+//     directionsRenderer.setDirections(data);
+//   });
