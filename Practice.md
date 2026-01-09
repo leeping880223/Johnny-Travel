@@ -41,5 +41,6 @@
          git fetch
          git status 
         ```
+    - **Pull**
     
  * **Push(maintain)**
