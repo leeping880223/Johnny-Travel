@@ -84,15 +84,17 @@
     ![Push1.png](screenshots/Push1.png)
     ![Push2.png](screenshots/Push2.png)
 * **branch**
-    1. Create & Switch a new branch
+    1. Check which branch 
+     ```git branch```
+    3. Create & Switch a new branch
     ```bash
     git checkout -b <branch name>
     ```
-    2. Push Branch to GitHub
+    4. Push Branch to GitHub
     ```bash
     git push -u origin <branch_name>
     ```
-    3. Merge
+    5. Merge
     **"git checkout main"** swich branch
     **"git pull"** chech that is new
     **"git merge <branch_name>"** merge
@@ -103,10 +105,11 @@
     git merge <branch_name>
     git push
     ```
-    4. Delete Branch
+    6. Delete Branch
     ```batch
     git branch -d <branch_name>
     ```
+    ![Delete branch.png](screenshots/branch4.png)
 * **Undo & Recovery**
     * Just browsing : ```git checkout <commit_id>```
 
