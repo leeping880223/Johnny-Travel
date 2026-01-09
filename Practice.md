@@ -24,7 +24,7 @@
         past and using `crt + k` + `v` to preview
         ![PreviewMD.png](screenshots/PreviewMD.png)
 ### 3.How to clone & pull & push code
-  * **Clone**
+  * **Clone (First time)**
     Create a new folder and "cd" to there
     ```bash
         cd ".\Newfloder"
@@ -33,4 +33,13 @@
     ```bash
         git clone <code link>
     ```
-    ![after_clone.png](screenshots/after_clone.png)
+    ![after_clone.png](screenshots/after_clone.png) 
+ * **Pull(maintain)**
+    - **Fetch**
+     Use "fetch" check is it any change from the github before "Pull" 
+        ```bash
+         git fetch
+         git status 
+        ```
+    
+ * **Push(maintain)**
