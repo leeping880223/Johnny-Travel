@@ -107,3 +107,14 @@
     ```batch
     git branch -d <branch_name>
     ```
+* **Undo & Recovery**
+    * Just browsing : ```git checkout <commit_id>```
+
+    * Safe undo : ```git revert <commit_id>``` 
+    (Creates a new commit to undo changes).
+
+    * Soft undo : ```git reset --soft <commit_id>```
+     (Keep your code, but un-commit it).
+
+    * Hard undo : ```git reset --hard <commit_id> ```
+    (Delete everything back to that commit).
